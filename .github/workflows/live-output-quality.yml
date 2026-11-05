@@ -70,7 +70,7 @@ jobs:
       HAS_GEMINI: ${{ secrets.GEMINI_API_KEY != '' && (inputs.run_gemini == true || inputs.run_gemini == '') }}
     steps:
       - name: Checkout Vericore
-        uses: actions/checkout@v7
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
       - name: Set up JDK 25

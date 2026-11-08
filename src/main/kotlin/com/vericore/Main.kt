@@ -30,9 +30,12 @@ import com.vericore.cli.ServerCommand
 import com.vericore.cli.SetupCommand
 import com.vericore.cli.VerifyCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.main
 import kotlin.system.exitProcess
+import io.github.oshai.kotlinlogging.KotlinLoggingConfiguration
 
 fun main(args: Array<String>) {
+    KotlinLoggingConfiguration.logStartupMessage = false
     val javaMajor = Runtime.version().feature()
     if (javaMajor < 25) {
         System.err.println(
@@ -49,6 +52,7 @@ fun main(args: Array<String>) {
         )
         exitProcess(1)
     }
+    com.vericore.cli.JsonEnvelope.reset()
     try {
         MainCommand()
             .subcommands(
@@ -82,7 +86,7 @@ fun main(args: Array<String>) {
             )
             .main(args)
     } catch (e: Throwable) {
-        com.vericore.cli.ErrorHandler.handle(e)
-        exitProcess(1)
+        val exitCode = com.vericore.cli.ErrorHandler.handle(e, args)
+        exitProcess(exitCode)
     }
 }

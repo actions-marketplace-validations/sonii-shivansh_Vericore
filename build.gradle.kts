@@ -21,7 +21,7 @@ dependencies {
     implementation("com.squareup:kotlinpoet:2.4.0")
     implementation("org.eclipse.jgit:org.eclipse.jgit:7.8.0.202609011348-r")
     implementation("org.jgrapht:jgrapht-core:1.5.3")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.12.0")
     implementation("io.github.oshai:kotlin-logging-jvm:8.0.4")
     implementation("ch.qos.logback:logback-classic:1.6.6")
     implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.12.0")

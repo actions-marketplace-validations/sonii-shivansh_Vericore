@@ -19,10 +19,10 @@ dependencies {
     implementation("com.github.ajalt.clikt:clikt:5.1.0")
     implementation("com.github.javaparser:javaparser-symbol-solver-core:3.28.2")
     implementation("com.squareup:kotlinpoet:2.4.0")
-    implementation("org.eclipse.jgit:org.eclipse.jgit:7.8.0.202609011348-r")
+    implementation("org.eclipse.jgit:org.eclipse.jgit:7.8.1.202611041320-r")
     implementation("org.jgrapht:jgrapht-core:1.5.3")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0")
-    implementation("io.github.oshai:kotlin-logging-jvm:8.0.4")
+    implementation("io.github.oshai:kotlin-logging-jvm:8.0.7")
     implementation("ch.qos.logback:logback-classic:1.6.6")
     implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.12.0")
     implementation("io.ktor:ktor-server-core-jvm:3.6.1")
@@ -34,7 +34,7 @@ dependencies {
     testImplementation("io.kotest:kotest-runner-junit5:6.2.6")
     testImplementation("io.kotest:kotest-assertions-core:6.2.6")
     testImplementation("io.kotest:kotest-property:6.2.6")
-    testImplementation("io.mockk:mockk:1.14.11")
+    testImplementation("io.mockk:mockk:1.14.12")
 }
 
 application {
